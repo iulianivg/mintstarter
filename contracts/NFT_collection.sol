@@ -19,12 +19,22 @@ contract NFT_Collection is ERC721, ReentrancyGuard {
   bool public renounceURIFIX = false;
   address nftmintstarter = 0xe6D97963b41ca32B923Fad0B39e74834DDD01594;
 
-  constructor (string memory name, string memory symbol, uint256 _royalty, uint256 basePrice, uint256 _startMint, uint256 _max) ERC721(name, symbol){
+    // project info
+  address public twitter;
+  address public instagram;
+  address public website; 
+  address public telegram;
+
+  constructor (string memory name, string memory symbol, uint256 _royalty, uint256 basePrice, uint256 _startMint, uint256 _max, address _twitter, address _insta, address _website, address _tgram) ERC721(name, symbol){
       owner = msg.sender;
       royalty = _royalty;
       startMint = _startMint;
       basePriceMint = basePrice;
       maxSupply = _max;
+      twitter = _twitter;
+      instagram = _insta;
+      website = _website;
+      telegram = _tgram;
   }
 
   struct Artwork{

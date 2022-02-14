@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "./interfaces/ReentrancyGuard.sol"; 
+import "../interfaces/ReentrancyGuard.sol"; 
 import "./libraries/SafeMath.sol";
 import "./ERC721.sol"; 
 
